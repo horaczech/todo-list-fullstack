@@ -1,0 +1,23 @@
+{
+  "name": "todo-list-fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "install": "npm run install-server && npm run install-client",
+    "build-server": "npm run build --prefix server",
+    "start-server": "npm run start --prefix server",
+    "dev-server": "npm run dev --prefix server",
+    "start-client": "npm start --prefix client",
+    "watch": "npm run dev-server & npm run start-client",
+    "deploy": "npm run build --prefix client && npm start --prefix server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.8.2"
+  }
+}
