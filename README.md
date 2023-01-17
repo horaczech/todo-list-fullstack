@@ -15,5 +15,5 @@ npm run watch
 
 ```bash
 npm run install
-npm run deploy
+npm run build
 ```
