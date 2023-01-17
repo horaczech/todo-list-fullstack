@@ -17,3 +17,8 @@ npm run watch
 npm run install
 npm run build
 ```
+
+## Important links
+
+- [Running app](https://todo-list-fullstack-ph.herokuapp.com/)
+- [Docs](https://todo-list-fullstack-ph.herokuapp.com/api-docs/)
