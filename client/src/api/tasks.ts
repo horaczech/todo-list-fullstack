@@ -3,7 +3,7 @@ import axios, {AxiosResponse} from 'axios';
 import {AddTaskRequestBody, EditTaskRequestArgs, Task} from '../types/api';
 
 const api = axios.create({
-  baseURL: `${process.env.ENV_URL || 'http://localhost:8000'}/v1`
+  baseURL: `https://todo-list-fullstack-ph.herokuapp.com/v1`
 });
 
 export const useTasks = () => {
