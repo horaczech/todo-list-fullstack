@@ -37,11 +37,12 @@ const TaskSection: React.FC = () => {
 
   const submitHandler = async (values: typeof initialValues) => {
     if (values.title) {
-      addTask.mutate(
+      await addTask.mutateAsync(
         {title: values.title},
         {
           onSuccess: () => {
             setIsAddingTask(false);
+            refetchTasks();
           },
           onError: () => alert('Error while adding new task')
         }
@@ -49,8 +50,8 @@ const TaskSection: React.FC = () => {
     }
   };
 
-  const deleteTaskHandler = (id: number, closeFnc: () => void) => {
-    deleteTask.mutate(
+  const deleteTaskHandler = async (id: number, closeFnc: () => void) => {
+    await deleteTask.mutateAsync(
       {id},
       {
         onSuccess: refetchTasks,
@@ -116,7 +117,9 @@ const TaskSection: React.FC = () => {
                       onChange={props.handleChange}
                       placeholder="Name of task"
                     />
-                    <Button ml={3}>Submit</Button>
+                    <Button ml={3} type="submit">
+                      Submit
+                    </Button>
                   </Flex>
                 </form>
               )}

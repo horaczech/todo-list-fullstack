@@ -35,7 +35,7 @@ const OneTask: React.FC<Props> = ({data, onDelete, isDetail, openModal, closeMod
 
   const submitHandler = async (values: typeof initialValues) => {
     if (values.title) {
-      editTask.mutate(
+      await editTask.mutateAsync(
         {id: data.id, title: values.title},
         {
           onError: () => alert('Error while editing task'),
